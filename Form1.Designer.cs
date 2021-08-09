@@ -29,34 +29,162 @@ namespace U2A1IDEXXXx
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.Boton = new System.Windows.Forms.Button();
+            this.NombreClinica = new System.Windows.Forms.Label();
+            this.DescripcionModulo = new System.Windows.Forms.Label();
+            this.LogoClinica = new System.Windows.Forms.PictureBox();
+            this.NombreLabel = new System.Windows.Forms.Label();
+            this.DireccionLabel = new System.Windows.Forms.Label();
+            this.TelefonoLabel = new System.Windows.Forms.Label();
+            this.MovilLabel = new System.Windows.Forms.Label();
+            this.EdadLabel = new System.Windows.Forms.Label();
+            this.SexoLabel = new System.Windows.Forms.Label();
+            this.EdoCivilLabel = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.LogoClinica)).BeginInit();
             this.SuspendLayout();
             // 
             // Boton
             // 
-            this.Boton.Location = new System.Drawing.Point(263, 287);
+            this.Boton.Location = new System.Drawing.Point(649, 288);
             this.Boton.Name = "Boton";
-            this.Boton.Size = new System.Drawing.Size(215, 64);
+            this.Boton.Size = new System.Drawing.Size(113, 37);
             this.Boton.TabIndex = 0;
-            this.Boton.Text = "Boton";
+            this.Boton.Text = "Guardar";
             this.Boton.UseVisualStyleBackColor = true;
             this.Boton.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // NombreClinica
+            // 
+            this.NombreClinica.AutoSize = true;
+            this.NombreClinica.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.NombreClinica.Location = new System.Drawing.Point(336, 17);
+            this.NombreClinica.Name = "NombreClinica";
+            this.NombreClinica.Size = new System.Drawing.Size(150, 28);
+            this.NombreClinica.TabIndex = 1;
+            this.NombreClinica.Text = "Clinica Alemana";
+            // 
+            // DescripcionModulo
+            // 
+            this.DescripcionModulo.AutoSize = true;
+            this.DescripcionModulo.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.DescripcionModulo.Location = new System.Drawing.Point(291, 52);
+            this.DescripcionModulo.Name = "DescripcionModulo";
+            this.DescripcionModulo.Size = new System.Drawing.Size(236, 21);
+            this.DescripcionModulo.TabIndex = 2;
+            this.DescripcionModulo.Text = "Modulo de Registro de Pacientes";
+            this.DescripcionModulo.Click += new System.EventHandler(this.label2_Click);
+            // 
+            // LogoClinica
+            // 
+            this.LogoClinica.Image = ((System.Drawing.Image)(resources.GetObject("LogoClinica.Image")));
+            this.LogoClinica.Location = new System.Drawing.Point(12, 12);
+            this.LogoClinica.Name = "LogoClinica";
+            this.LogoClinica.Size = new System.Drawing.Size(220, 61);
+            this.LogoClinica.TabIndex = 3;
+            this.LogoClinica.TabStop = false;
+            // 
+            // NombreLabel
+            // 
+            this.NombreLabel.AutoSize = true;
+            this.NombreLabel.Location = new System.Drawing.Point(13, 111);
+            this.NombreLabel.Name = "NombreLabel";
+            this.NombreLabel.Size = new System.Drawing.Size(107, 15);
+            this.NombreLabel.TabIndex = 4;
+            this.NombreLabel.Text = "Nombre Completo";
+            this.NombreLabel.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // DireccionLabel
+            // 
+            this.DireccionLabel.AutoSize = true;
+            this.DireccionLabel.Location = new System.Drawing.Point(13, 144);
+            this.DireccionLabel.Name = "DireccionLabel";
+            this.DireccionLabel.Size = new System.Drawing.Size(57, 15);
+            this.DireccionLabel.TabIndex = 5;
+            this.DireccionLabel.Text = "Dirección";
+            // 
+            // TelefonoLabel
+            // 
+            this.TelefonoLabel.AutoSize = true;
+            this.TelefonoLabel.Location = new System.Drawing.Point(13, 175);
+            this.TelefonoLabel.Name = "TelefonoLabel";
+            this.TelefonoLabel.Size = new System.Drawing.Size(52, 15);
+            this.TelefonoLabel.TabIndex = 6;
+            this.TelefonoLabel.Text = "Teléfono";
+            // 
+            // MovilLabel
+            // 
+            this.MovilLabel.AutoSize = true;
+            this.MovilLabel.Location = new System.Drawing.Point(263, 175);
+            this.MovilLabel.Name = "MovilLabel";
+            this.MovilLabel.Size = new System.Drawing.Size(85, 15);
+            this.MovilLabel.TabIndex = 7;
+            this.MovilLabel.Text = "Teléfono Movil";
+            // 
+            // EdadLabel
+            // 
+            this.EdadLabel.AutoSize = true;
+            this.EdadLabel.Location = new System.Drawing.Point(550, 110);
+            this.EdadLabel.Name = "EdadLabel";
+            this.EdadLabel.Size = new System.Drawing.Size(33, 15);
+            this.EdadLabel.TabIndex = 8;
+            this.EdadLabel.Text = "Edad";
+            // 
+            // SexoLabel
+            // 
+            this.SexoLabel.AutoSize = true;
+            this.SexoLabel.Location = new System.Drawing.Point(550, 144);
+            this.SexoLabel.Name = "SexoLabel";
+            this.SexoLabel.Size = new System.Drawing.Size(32, 15);
+            this.SexoLabel.TabIndex = 9;
+            this.SexoLabel.Text = "Sexo";
+            // 
+            // EdoCivilLabel
+            // 
+            this.EdoCivilLabel.AutoSize = true;
+            this.EdoCivilLabel.Location = new System.Drawing.Point(550, 175);
+            this.EdoCivilLabel.Name = "EdoCivilLabel";
+            this.EdoCivilLabel.Size = new System.Drawing.Size(68, 15);
+            this.EdoCivilLabel.TabIndex = 10;
+            this.EdoCivilLabel.Text = "Estado Civil";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(774, 337);
+            this.Controls.Add(this.EdoCivilLabel);
+            this.Controls.Add(this.SexoLabel);
+            this.Controls.Add(this.EdadLabel);
+            this.Controls.Add(this.MovilLabel);
+            this.Controls.Add(this.TelefonoLabel);
+            this.Controls.Add(this.DireccionLabel);
+            this.Controls.Add(this.NombreLabel);
+            this.Controls.Add(this.LogoClinica);
+            this.Controls.Add(this.DescripcionModulo);
+            this.Controls.Add(this.NombreClinica);
             this.Controls.Add(this.Boton);
             this.Name = "Form1";
             this.Text = "Form1";
+            ((System.ComponentModel.ISupportInitialize)(this.LogoClinica)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
         private System.Windows.Forms.Button Boton;
+        private System.Windows.Forms.Label NombreClinica;
+        private System.Windows.Forms.Label DescripcionModulo;
+        private System.Windows.Forms.PictureBox LogoClinica;
+        private System.Windows.Forms.Label NombreLabel;
+        private System.Windows.Forms.Label DireccionLabel;
+        private System.Windows.Forms.Label TelefonoLabel;
+        private System.Windows.Forms.Label MovilLabel;
+        private System.Windows.Forms.Label EdadLabel;
+        private System.Windows.Forms.Label SexoLabel;
+        private System.Windows.Forms.Label EdoCivilLabel;
     }
 }
 
