@@ -30,7 +30,7 @@ namespace U2A1IDEXXXx
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            this.Boton = new System.Windows.Forms.Button();
+            this.Guardar = new System.Windows.Forms.Button();
             this.NombreClinica = new System.Windows.Forms.Label();
             this.DescripcionModulo = new System.Windows.Forms.Label();
             this.LogoClinica = new System.Windows.Forms.PictureBox();
@@ -41,18 +41,28 @@ namespace U2A1IDEXXXx
             this.EdadLabel = new System.Windows.Forms.Label();
             this.SexoLabel = new System.Windows.Forms.Label();
             this.EdoCivilLabel = new System.Windows.Forms.Label();
+            this.CbxEdoCivil = new System.Windows.Forms.ComboBox();
+            this.TxtNombreC = new System.Windows.Forms.TextBox();
+            this.DireccionBox = new System.Windows.Forms.TextBox();
+            this.TelefonoBox = new System.Windows.Forms.TextBox();
+            this.MovilBox = new System.Windows.Forms.TextBox();
+            this.EdadBox = new System.Windows.Forms.TextBox();
+            this.RbdSexo = new System.Windows.Forms.GroupBox();
+            this.radioButtonFem = new System.Windows.Forms.RadioButton();
+            this.radioButtonMas = new System.Windows.Forms.RadioButton();
             ((System.ComponentModel.ISupportInitialize)(this.LogoClinica)).BeginInit();
+            this.RbdSexo.SuspendLayout();
             this.SuspendLayout();
             // 
-            // Boton
+            // Guardar
             // 
-            this.Boton.Location = new System.Drawing.Point(649, 288);
-            this.Boton.Name = "Boton";
-            this.Boton.Size = new System.Drawing.Size(113, 37);
-            this.Boton.TabIndex = 0;
-            this.Boton.Text = "Guardar";
-            this.Boton.UseVisualStyleBackColor = true;
-            this.Boton.Click += new System.EventHandler(this.button1_Click);
+            this.Guardar.Location = new System.Drawing.Point(649, 288);
+            this.Guardar.Name = "Guardar";
+            this.Guardar.Size = new System.Drawing.Size(113, 37);
+            this.Guardar.TabIndex = 0;
+            this.Guardar.Text = "Guardar";
+            this.Guardar.UseVisualStyleBackColor = true;
+            this.Guardar.Click += new System.EventHandler(this.button1_Click);
             // 
             // NombreClinica
             // 
@@ -106,7 +116,7 @@ namespace U2A1IDEXXXx
             // TelefonoLabel
             // 
             this.TelefonoLabel.AutoSize = true;
-            this.TelefonoLabel.Location = new System.Drawing.Point(13, 175);
+            this.TelefonoLabel.Location = new System.Drawing.Point(13, 180);
             this.TelefonoLabel.Name = "TelefonoLabel";
             this.TelefonoLabel.Size = new System.Drawing.Size(52, 15);
             this.TelefonoLabel.TabIndex = 6;
@@ -115,7 +125,7 @@ namespace U2A1IDEXXXx
             // MovilLabel
             // 
             this.MovilLabel.AutoSize = true;
-            this.MovilLabel.Location = new System.Drawing.Point(263, 175);
+            this.MovilLabel.Location = new System.Drawing.Point(264, 180);
             this.MovilLabel.Name = "MovilLabel";
             this.MovilLabel.Size = new System.Drawing.Size(85, 15);
             this.MovilLabel.TabIndex = 7;
@@ -124,7 +134,7 @@ namespace U2A1IDEXXXx
             // EdadLabel
             // 
             this.EdadLabel.AutoSize = true;
-            this.EdadLabel.Location = new System.Drawing.Point(550, 110);
+            this.EdadLabel.Location = new System.Drawing.Point(550, 144);
             this.EdadLabel.Name = "EdadLabel";
             this.EdadLabel.Size = new System.Drawing.Size(33, 15);
             this.EdadLabel.TabIndex = 8;
@@ -133,7 +143,7 @@ namespace U2A1IDEXXXx
             // SexoLabel
             // 
             this.SexoLabel.AutoSize = true;
-            this.SexoLabel.Location = new System.Drawing.Point(550, 144);
+            this.SexoLabel.Location = new System.Drawing.Point(550, 111);
             this.SexoLabel.Name = "SexoLabel";
             this.SexoLabel.Size = new System.Drawing.Size(32, 15);
             this.SexoLabel.TabIndex = 9;
@@ -142,17 +152,108 @@ namespace U2A1IDEXXXx
             // EdoCivilLabel
             // 
             this.EdoCivilLabel.AutoSize = true;
-            this.EdoCivilLabel.Location = new System.Drawing.Point(550, 175);
+            this.EdoCivilLabel.Location = new System.Drawing.Point(550, 180);
             this.EdoCivilLabel.Name = "EdoCivilLabel";
             this.EdoCivilLabel.Size = new System.Drawing.Size(68, 15);
             this.EdoCivilLabel.TabIndex = 10;
             this.EdoCivilLabel.Text = "Estado Civil";
+            // 
+            // CbxEdoCivil
+            // 
+            this.CbxEdoCivil.FormattingEnabled = true;
+            this.CbxEdoCivil.Items.AddRange(new object[] {
+            "Soltero",
+            "Casado",
+            "Divorciado",
+            "Viudo",
+            "Concubinato"});
+            this.CbxEdoCivil.Location = new System.Drawing.Point(635, 177);
+            this.CbxEdoCivil.Name = "CbxEdoCivil";
+            this.CbxEdoCivil.Size = new System.Drawing.Size(121, 23);
+            this.CbxEdoCivil.TabIndex = 11;
+            this.CbxEdoCivil.Text = "Seleccionar";
+            this.CbxEdoCivil.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            // 
+            // TxtNombreC
+            // 
+            this.TxtNombreC.Location = new System.Drawing.Point(127, 107);
+            this.TxtNombreC.Name = "TxtNombreC";
+            this.TxtNombreC.Size = new System.Drawing.Size(400, 23);
+            this.TxtNombreC.TabIndex = 12;
+            // 
+            // DireccionBox
+            // 
+            this.DireccionBox.Location = new System.Drawing.Point(127, 144);
+            this.DireccionBox.Name = "DireccionBox";
+            this.DireccionBox.Size = new System.Drawing.Size(400, 23);
+            this.DireccionBox.TabIndex = 13;
+            // 
+            // TelefonoBox
+            // 
+            this.TelefonoBox.Location = new System.Drawing.Point(127, 180);
+            this.TelefonoBox.Name = "TelefonoBox";
+            this.TelefonoBox.Size = new System.Drawing.Size(131, 23);
+            this.TelefonoBox.TabIndex = 14;
+            // 
+            // MovilBox
+            // 
+            this.MovilBox.Location = new System.Drawing.Point(355, 180);
+            this.MovilBox.Name = "MovilBox";
+            this.MovilBox.Size = new System.Drawing.Size(172, 23);
+            this.MovilBox.TabIndex = 15;
+            // 
+            // EdadBox
+            // 
+            this.EdadBox.Location = new System.Drawing.Point(635, 136);
+            this.EdadBox.Name = "EdadBox";
+            this.EdadBox.Size = new System.Drawing.Size(121, 23);
+            this.EdadBox.TabIndex = 16;
+            // 
+            // RbdSexo
+            // 
+            this.RbdSexo.Controls.Add(this.radioButtonMas);
+            this.RbdSexo.Controls.Add(this.radioButtonFem);
+            this.RbdSexo.Location = new System.Drawing.Point(588, 87);
+            this.RbdSexo.Name = "RbdSexo";
+            this.RbdSexo.Size = new System.Drawing.Size(168, 43);
+            this.RbdSexo.TabIndex = 17;
+            this.RbdSexo.TabStop = false;
+            // 
+            // radioButtonFem
+            // 
+            this.radioButtonFem.AutoSize = true;
+            this.radioButtonFem.Location = new System.Drawing.Point(4, 18);
+            this.radioButtonFem.Name = "radioButtonFem";
+            this.radioButtonFem.Size = new System.Drawing.Size(78, 19);
+            this.radioButtonFem.TabIndex = 0;
+            this.radioButtonFem.TabStop = true;
+            this.radioButtonFem.Text = "Femenino";
+            this.radioButtonFem.UseVisualStyleBackColor = true;
+            // 
+            // radioButtonMas
+            // 
+            this.radioButtonMas.AutoSize = true;
+            this.radioButtonMas.Location = new System.Drawing.Point(86, 18);
+            this.radioButtonMas.Name = "radioButtonMas";
+            this.radioButtonMas.Size = new System.Drawing.Size(80, 19);
+            this.radioButtonMas.TabIndex = 18;
+            this.radioButtonMas.TabStop = true;
+            this.radioButtonMas.Text = "Masculino";
+            this.radioButtonMas.UseVisualStyleBackColor = true;
+            this.radioButtonMas.CheckedChanged += new System.EventHandler(this.radioButtonMas_CheckedChanged);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(774, 337);
+            this.Controls.Add(this.RbdSexo);
+            this.Controls.Add(this.EdadBox);
+            this.Controls.Add(this.MovilBox);
+            this.Controls.Add(this.TelefonoBox);
+            this.Controls.Add(this.DireccionBox);
+            this.Controls.Add(this.TxtNombreC);
+            this.Controls.Add(this.CbxEdoCivil);
             this.Controls.Add(this.EdoCivilLabel);
             this.Controls.Add(this.SexoLabel);
             this.Controls.Add(this.EdadLabel);
@@ -163,10 +264,12 @@ namespace U2A1IDEXXXx
             this.Controls.Add(this.LogoClinica);
             this.Controls.Add(this.DescripcionModulo);
             this.Controls.Add(this.NombreClinica);
-            this.Controls.Add(this.Boton);
+            this.Controls.Add(this.Guardar);
             this.Name = "Form1";
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.LogoClinica)).EndInit();
+            this.RbdSexo.ResumeLayout(false);
+            this.RbdSexo.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -174,7 +277,7 @@ namespace U2A1IDEXXXx
 
         #endregion
 
-        private System.Windows.Forms.Button Boton;
+        private System.Windows.Forms.Button Guardar;
         private System.Windows.Forms.Label NombreClinica;
         private System.Windows.Forms.Label DescripcionModulo;
         private System.Windows.Forms.PictureBox LogoClinica;
@@ -185,6 +288,15 @@ namespace U2A1IDEXXXx
         private System.Windows.Forms.Label EdadLabel;
         private System.Windows.Forms.Label SexoLabel;
         private System.Windows.Forms.Label EdoCivilLabel;
+        private System.Windows.Forms.ComboBox CbxEdoCivil;
+        private System.Windows.Forms.TextBox TxtNombreC;
+        private System.Windows.Forms.TextBox DireccionBox;
+        private System.Windows.Forms.TextBox TelefonoBox;
+        private System.Windows.Forms.TextBox MovilBox;
+        private System.Windows.Forms.TextBox EdadBox;
+        private System.Windows.Forms.GroupBox RbdSexo;
+        private System.Windows.Forms.RadioButton radioButtonFem;
+        private System.Windows.Forms.RadioButton radioButtonMas;
     }
 }
 
