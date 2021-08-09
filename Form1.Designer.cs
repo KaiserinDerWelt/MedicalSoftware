@@ -48,8 +48,10 @@ namespace U2A1IDEXXXx
             this.MovilBox = new System.Windows.Forms.TextBox();
             this.EdadBox = new System.Windows.Forms.TextBox();
             this.RbdSexo = new System.Windows.Forms.GroupBox();
-            this.radioButtonFem = new System.Windows.Forms.RadioButton();
             this.radioButtonMas = new System.Windows.Forms.RadioButton();
+            this.radioButtonFem = new System.Windows.Forms.RadioButton();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.LogoClinica)).BeginInit();
             this.RbdSexo.SuspendLayout();
             this.SuspendLayout();
@@ -219,17 +221,6 @@ namespace U2A1IDEXXXx
             this.RbdSexo.TabIndex = 17;
             this.RbdSexo.TabStop = false;
             // 
-            // radioButtonFem
-            // 
-            this.radioButtonFem.AutoSize = true;
-            this.radioButtonFem.Location = new System.Drawing.Point(4, 18);
-            this.radioButtonFem.Name = "radioButtonFem";
-            this.radioButtonFem.Size = new System.Drawing.Size(78, 19);
-            this.radioButtonFem.TabIndex = 0;
-            this.radioButtonFem.TabStop = true;
-            this.radioButtonFem.Text = "Femenino";
-            this.radioButtonFem.UseVisualStyleBackColor = true;
-            // 
             // radioButtonMas
             // 
             this.radioButtonMas.AutoSize = true;
@@ -242,11 +233,43 @@ namespace U2A1IDEXXXx
             this.radioButtonMas.UseVisualStyleBackColor = true;
             this.radioButtonMas.CheckedChanged += new System.EventHandler(this.radioButtonMas_CheckedChanged);
             // 
+            // radioButtonFem
+            // 
+            this.radioButtonFem.AutoSize = true;
+            this.radioButtonFem.Location = new System.Drawing.Point(4, 18);
+            this.radioButtonFem.Name = "radioButtonFem";
+            this.radioButtonFem.Size = new System.Drawing.Size(78, 19);
+            this.radioButtonFem.TabIndex = 0;
+            this.radioButtonFem.TabStop = true;
+            this.radioButtonFem.Text = "Femenino";
+            this.radioButtonFem.UseVisualStyleBackColor = true;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(505, 288);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(113, 37);
+            this.button1.TabIndex = 18;
+            this.button1.Text = "Actualizar";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(355, 288);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(113, 37);
+            this.button2.TabIndex = 19;
+            this.button2.Text = "Eliminar";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(774, 337);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.RbdSexo);
             this.Controls.Add(this.EdadBox);
             this.Controls.Add(this.MovilBox);
@@ -297,6 +320,8 @@ namespace U2A1IDEXXXx
         private System.Windows.Forms.GroupBox RbdSexo;
         private System.Windows.Forms.RadioButton radioButtonFem;
         private System.Windows.Forms.RadioButton radioButtonMas;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
     }
 }
 
