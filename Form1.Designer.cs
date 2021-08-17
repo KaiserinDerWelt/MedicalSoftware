@@ -1,4 +1,6 @@
 ﻿
+using System;
+
 namespace U2A1IDEXXXx
 {
     partial class Form1
@@ -310,6 +312,8 @@ namespace U2A1IDEXXXx
             this.PerformLayout();
 
         }
+
+
 
         #endregion
 
