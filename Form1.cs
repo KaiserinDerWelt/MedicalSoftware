@@ -51,5 +51,17 @@ namespace U2A1IDEXXXx
         {
 
         }
+
+        private void MovilBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Button3_Click(object sender, EventArgs e)
+        {
+            //Aqui escribiremos el metodo para probar nuestra conexion
+            //Llamaremos a la clase donde alojamos el metodo de conexion y al mismo metodo GetConnection();
+            MyConnection.GetConnection();
+        }
     }
 }
