@@ -58,11 +58,11 @@ namespace U2A1IDEXXXx
             // 
             // Guardar
             // 
+            this.Guardar.Image = global::U2A1IDEXXXx.Properties.Resources.Save;
             this.Guardar.Location = new System.Drawing.Point(649, 288);
             this.Guardar.Name = "Guardar";
             this.Guardar.Size = new System.Drawing.Size(113, 37);
             this.Guardar.TabIndex = 0;
-            this.Guardar.Text = "Guardar";
             this.Guardar.UseVisualStyleBackColor = true;
             this.Guardar.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -246,21 +246,21 @@ namespace U2A1IDEXXXx
             // 
             // button1
             // 
+            this.button1.Image = global::U2A1IDEXXXx.Properties.Resources.Refresh;
             this.button1.Location = new System.Drawing.Point(505, 288);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(113, 37);
             this.button1.TabIndex = 18;
-            this.button1.Text = "Actualizar";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // button2
             // 
+            this.button2.Image = global::U2A1IDEXXXx.Properties.Resources.Trash;
             this.button2.Location = new System.Drawing.Point(355, 288);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(113, 37);
             this.button2.TabIndex = 19;
-            this.button2.Text = "Eliminar";
             this.button2.UseVisualStyleBackColor = true;
             // 
             // Form1
