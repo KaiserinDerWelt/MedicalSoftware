@@ -60,7 +60,14 @@ namespace U2A1IDEXXXx
         private void button3_Click(object sender, EventArgs e)
         {
             MyConnection.GetConnection();
-            MessageBox.Show("Conectado"); 
+            MessageBox.Show("Conectado");
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            MyConnection.DownConnection();
+            MessageBox.Show("Desconectado");
+
         }
     }
 }
