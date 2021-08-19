@@ -54,8 +54,9 @@ namespace U2A1IDEXXXx
             this.radioButtonFem = new System.Windows.Forms.RadioButton();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.ProbarConexion = new System.Windows.Forms.Button();
+            this.LabelListadoMedicos = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.LogoClinica)).BeginInit();
             this.RbdSexo.SuspendLayout();
             this.SuspendLayout();
@@ -63,7 +64,7 @@ namespace U2A1IDEXXXx
             // Guardar
             // 
             this.Guardar.Image = global::U2A1IDEXXXx.Properties.Resources.Save;
-            this.Guardar.Location = new System.Drawing.Point(649, 288);
+            this.Guardar.Location = new System.Drawing.Point(653, 365);
             this.Guardar.Name = "Guardar";
             this.Guardar.Size = new System.Drawing.Size(113, 37);
             this.Guardar.TabIndex = 0;
@@ -252,7 +253,7 @@ namespace U2A1IDEXXXx
             // button1
             // 
             this.button1.Image = global::U2A1IDEXXXx.Properties.Resources.Refresh;
-            this.button1.Location = new System.Drawing.Point(505, 288);
+            this.button1.Location = new System.Drawing.Point(505, 365);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(113, 37);
             this.button1.TabIndex = 18;
@@ -262,39 +263,47 @@ namespace U2A1IDEXXXx
             // button2
             // 
             this.button2.Image = global::U2A1IDEXXXx.Properties.Resources.Trash;
-            this.button2.Location = new System.Drawing.Point(355, 288);
+            this.button2.Location = new System.Drawing.Point(355, 365);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(113, 37);
             this.button2.TabIndex = 19;
             this.button2.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // ProbarConexion
             // 
-            this.button3.Location = new System.Drawing.Point(13, 267);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(154, 58);
-            this.button3.TabIndex = 20;
-            this.button3.Text = "Prueba conexion";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.ProbarConexion.Location = new System.Drawing.Point(13, 344);
+            this.ProbarConexion.Name = "ProbarConexion";
+            this.ProbarConexion.Size = new System.Drawing.Size(154, 58);
+            this.ProbarConexion.TabIndex = 20;
+            this.ProbarConexion.Text = "Prueba conexion";
+            this.ProbarConexion.UseVisualStyleBackColor = true;
+            this.ProbarConexion.Click += new System.EventHandler(this.button3_Click);
             // 
-            // button4
+            // LabelListadoMedicos
             // 
-            this.button4.Location = new System.Drawing.Point(189, 267);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(123, 58);
-            this.button4.TabIndex = 21;
-            this.button4.Text = "Cerrar conexion";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.LabelListadoMedicos.AutoSize = true;
+            this.LabelListadoMedicos.Location = new System.Drawing.Point(13, 252);
+            this.LabelListadoMedicos.Name = "LabelListadoMedicos";
+            this.LabelListadoMedicos.Size = new System.Drawing.Size(90, 15);
+            this.LabelListadoMedicos.TabIndex = 21;
+            this.LabelListadoMedicos.Text = "ListadoMedicos";
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(127, 243);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(400, 23);
+            this.comboBox1.TabIndex = 22;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(774, 337);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
+            this.ClientSize = new System.Drawing.Size(778, 423);
+            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.LabelListadoMedicos);
+            this.Controls.Add(this.ProbarConexion);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.RbdSexo);
@@ -351,8 +360,9 @@ namespace U2A1IDEXXXx
         private System.Windows.Forms.RadioButton radioButtonMas;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button ProbarConexion;
+        private System.Windows.Forms.Label LabelListadoMedicos;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }
 
