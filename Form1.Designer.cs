@@ -57,8 +57,10 @@ namespace U2A1IDEXXXx
             this.ProbarConexion = new System.Windows.Forms.Button();
             this.LabelListadoMedicos = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.LogoClinica)).BeginInit();
             this.RbdSexo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // Guardar
@@ -271,12 +273,13 @@ namespace U2A1IDEXXXx
             // 
             // ProbarConexion
             // 
+            this.ProbarConexion.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ProbarConexion.Location = new System.Drawing.Point(13, 344);
             this.ProbarConexion.Name = "ProbarConexion";
             this.ProbarConexion.Size = new System.Drawing.Size(154, 58);
             this.ProbarConexion.TabIndex = 20;
             this.ProbarConexion.Text = "Prueba conexion";
-            this.ProbarConexion.UseVisualStyleBackColor = true;
+            this.ProbarConexion.UseVisualStyleBackColor = false;
             this.ProbarConexion.Click += new System.EventHandler(this.button3_Click);
             // 
             // LabelListadoMedicos
@@ -296,11 +299,21 @@ namespace U2A1IDEXXXx
             this.comboBox1.Size = new System.Drawing.Size(400, 23);
             this.comboBox1.TabIndex = 22;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::U2A1IDEXXXx.Properties.Resources.salud;
+            this.pictureBox1.Location = new System.Drawing.Point(566, 205);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(165, 153);
+            this.pictureBox1.TabIndex = 23;
+            this.pictureBox1.TabStop = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(778, 423);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.LabelListadoMedicos);
             this.Controls.Add(this.ProbarConexion);
@@ -324,11 +337,12 @@ namespace U2A1IDEXXXx
             this.Controls.Add(this.DescripcionModulo);
             this.Controls.Add(this.NombreClinica);
             this.Controls.Add(this.Guardar);
-            this.Name = "Clinica Alemana";
+            this.Name = "Form1";
             this.Text = "Clinica Alemana";
             ((System.ComponentModel.ISupportInitialize)(this.LogoClinica)).EndInit();
             this.RbdSexo.ResumeLayout(false);
             this.RbdSexo.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -363,6 +377,7 @@ namespace U2A1IDEXXXx
         private System.Windows.Forms.Button ProbarConexion;
         private System.Windows.Forms.Label LabelListadoMedicos;
         private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 
