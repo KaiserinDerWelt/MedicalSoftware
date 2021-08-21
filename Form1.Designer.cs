@@ -291,7 +291,7 @@ namespace U2A1IDEXXXx
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(127, 243);
+            this.comboBox1.Location = new System.Drawing.Point(127, 252);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(400, 23);
             this.comboBox1.TabIndex = 22;
@@ -324,8 +324,8 @@ namespace U2A1IDEXXXx
             this.Controls.Add(this.DescripcionModulo);
             this.Controls.Add(this.NombreClinica);
             this.Controls.Add(this.Guardar);
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.Name = "Clinica Alemana";
+            this.Text = "Clinica Alemana";
             ((System.ComponentModel.ISupportInitialize)(this.LogoClinica)).EndInit();
             this.RbdSexo.ResumeLayout(false);
             this.RbdSexo.PerformLayout();
