@@ -63,6 +63,19 @@ namespace U2A1IDEXXXx
             MessageBox.Show("Conectado");
         }
 
-       
+        // private void Form1_Load(object sender, EventArgs e) //Metodo form load
+        // {
+        //MySqlCommand myCommand = new MySqlCommand("SELECT idTipoEdoCivil FROM estadocivil;", conexion);
+        //conexion.Open(); //Apertura de conexion
+        //MySqlDataReader register = myCommand.ExecuteReader();
+        //Ahora un ciclo while
+        //  while (register.Read())
+        //{
+        //CbxEdoCivil.Items.Add(register["idTipoEdoCivil"].ToString());
+        //}
+        //conexion.Close(); //Cerrado de conexicon
+        // }
+
+
     }
 }
