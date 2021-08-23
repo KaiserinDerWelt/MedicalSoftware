@@ -56,7 +56,7 @@ namespace U2A1IDEXXXx
             this.button2 = new System.Windows.Forms.Button();
             this.ProbarConexion = new System.Windows.Forms.Button();
             this.LabelListadoMedicos = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cbxMedicos = new System.Windows.Forms.ComboBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.LogoClinica)).BeginInit();
             this.RbdSexo.SuspendLayout();
@@ -291,13 +291,14 @@ namespace U2A1IDEXXXx
             this.LabelListadoMedicos.TabIndex = 21;
             this.LabelListadoMedicos.Text = "ListadoMedicos";
             // 
-            // comboBox1
+            // cbxMedicos
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(127, 252);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(400, 23);
-            this.comboBox1.TabIndex = 22;
+            this.cbxMedicos.FormattingEnabled = true;
+            this.cbxMedicos.Location = new System.Drawing.Point(127, 252);
+            this.cbxMedicos.Name = "cbxMedicos";
+            this.cbxMedicos.Size = new System.Drawing.Size(400, 23);
+            this.cbxMedicos.TabIndex = 22;
+            this.cbxMedicos.SelectedIndexChanged += new System.EventHandler(this.cbxMedicos_SelectedIndexChanged);
             // 
             // pictureBox1
             // 
@@ -314,7 +315,7 @@ namespace U2A1IDEXXXx
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(778, 423);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.cbxMedicos);
             this.Controls.Add(this.LabelListadoMedicos);
             this.Controls.Add(this.ProbarConexion);
             this.Controls.Add(this.button2);
@@ -376,7 +377,7 @@ namespace U2A1IDEXXXx
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button ProbarConexion;
         private System.Windows.Forms.Label LabelListadoMedicos;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cbxMedicos;
         private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

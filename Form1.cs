@@ -70,16 +70,39 @@ namespace U2A1IDEXXXx
         {
             MyConnection.GetConnection();
             MySqlCommand myCommand = new MySqlCommand("SELECT idTipoEdoCivil FROM estadocivil;", conexion); //Comando Sql para llamar el estado civil
+           // MySqlCommand myCommandMedicos = new MySqlCommand("SELECT NombreCompleto FROM tbmedicos;", conexion);
             conexion.Open(); //Apertura de conexion
               MySqlDataReader register = myCommand.ExecuteReader();
-        //Ahora un ciclo while
-       while (register.Read())
-        {
+             // MySqlDataReader registerMedicos = myCommandMedicos.ExecuteReader();
+            //Ahora un ciclo while
+            while (register.Read())
+             {
         CbxEdoCivil.Items.Add(register["idTipoEdoCivil"].ToString());
+            }
+        conexion.Close(); //Cerrado de conexion
+
+           // while (registerMedicos.Read())
+           // {
+             //   cbxMedicos.Items.Add(registerMedicos["NombreCompleto"].ToString());
+            //}
+            //conexion.Close(); //Cerrado de conexion
         }
-        conexion.Close(); //Cerrado de conexicon
+
+        private void cbxMedicos_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            MySqlCommand myCommandMedicos = new MySqlCommand("SELECT NombreCompleto FROM tbmedicos;", conexion);
+            conexion.Open(); //Apertura de conexion
+            MySqlDataReader registerMedicos = myCommandMedicos.ExecuteReader();
+            while (registerMedicos.Read())
+            {
+                cbxMedicos.Items.Add(registerMedicos["NombreCompleto"].ToString());
+                }
+                conexion.Close(); //Cerrado de conexion
+            }
         }
 
 
-    }
-}
+
+
+
+}       
