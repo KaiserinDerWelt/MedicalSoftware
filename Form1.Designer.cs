@@ -56,8 +56,8 @@ namespace U2A1IDEXXXx
             this.button2 = new System.Windows.Forms.Button();
             this.ProbarConexion = new System.Windows.Forms.Button();
             this.LabelListadoMedicos = new System.Windows.Forms.Label();
-            this.cbxMedicos = new System.Windows.Forms.ComboBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.cbxMedicos = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.LogoClinica)).BeginInit();
             this.RbdSexo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -170,12 +170,6 @@ namespace U2A1IDEXXXx
             // CbxEdoCivil
             // 
             this.CbxEdoCivil.FormattingEnabled = true;
-            this.CbxEdoCivil.Items.AddRange(new object[] {
-            "Soltero",
-            "Casado",
-            "Divorciado",
-            "Viudo",
-            "Concubinato"});
             this.CbxEdoCivil.Location = new System.Drawing.Point(635, 177);
             this.CbxEdoCivil.Name = "CbxEdoCivil";
             this.CbxEdoCivil.Size = new System.Drawing.Size(121, 23);
@@ -291,15 +285,6 @@ namespace U2A1IDEXXXx
             this.LabelListadoMedicos.TabIndex = 21;
             this.LabelListadoMedicos.Text = "ListadoMedicos";
             // 
-            // cbxMedicos
-            // 
-            this.cbxMedicos.FormattingEnabled = true;
-            this.cbxMedicos.Location = new System.Drawing.Point(127, 252);
-            this.cbxMedicos.Name = "cbxMedicos";
-            this.cbxMedicos.Size = new System.Drawing.Size(400, 23);
-            this.cbxMedicos.TabIndex = 22;
-            this.cbxMedicos.SelectedIndexChanged += new System.EventHandler(this.cbxMedicos_SelectedIndexChanged);
-            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::U2A1IDEXXXx.Properties.Resources.salud;
@@ -309,13 +294,21 @@ namespace U2A1IDEXXXx
             this.pictureBox1.TabIndex = 23;
             this.pictureBox1.TabStop = false;
             // 
+            // cbxMedicos
+            // 
+            this.cbxMedicos.FormattingEnabled = true;
+            this.cbxMedicos.Location = new System.Drawing.Point(127, 243);
+            this.cbxMedicos.Name = "cbxMedicos";
+            this.cbxMedicos.Size = new System.Drawing.Size(400, 23);
+            this.cbxMedicos.TabIndex = 24;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(778, 423);
-            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.cbxMedicos);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.LabelListadoMedicos);
             this.Controls.Add(this.ProbarConexion);
             this.Controls.Add(this.button2);
@@ -377,8 +370,8 @@ namespace U2A1IDEXXXx
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button ProbarConexion;
         private System.Windows.Forms.Label LabelListadoMedicos;
-        private System.Windows.Forms.ComboBox cbxMedicos;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.ComboBox cbxMedicos;
     }
 }
 

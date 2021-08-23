@@ -88,18 +88,7 @@ namespace U2A1IDEXXXx
             //conexion.Close(); //Cerrado de conexion
         }
 
-        private void cbxMedicos_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            MySqlCommand myCommandMedicos = new MySqlCommand("SELECT NombreCompleto FROM tbmedicos;", conexion);
-            conexion.Open(); //Apertura de conexion
-            MySqlDataReader registerMedicos = myCommandMedicos.ExecuteReader();
-            while (registerMedicos.Read())
-            {
-                cbxMedicos.Items.Add(registerMedicos["NombreCompleto"].ToString());
-                }
-                conexion.Close(); //Cerrado de conexion
-            }
-        }
+    }
 
 
 
