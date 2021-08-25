@@ -7,7 +7,8 @@ namespace U2A1IDEXXXx
 {
     public partial class Form1 : Form
     {
-       
+        MySqlConnection connector = new MySqlConnection("server=127.0.0.1; database=dbu3mala; Uid=root; pwd=; port=3306;");
+
 
         public Form1()
         {
@@ -59,36 +60,40 @@ namespace U2A1IDEXXXx
       private void Form1_Load(object sender, EventArgs e) //Metodo form load
         {
 
-            try
-            {
-                MySqlConnection connector = new MySqlConnection("server=127.0.0.1; database=dbu3mala; Uid=root; pwd=; port=3306;");
-                string Query = "SELECT * FROM dbu3mala.estadocivil;";
-                connector.Open(); //Abrir mi conexion
-                MySqlCommand myCommand = new MySqlCommand(Query, connector);
-                MySqlDataReader reader = myCommand.ExecuteReader(); //Data reader
-                while (reader.Read()) //Mientras tenga registros que leer
-                {
-                    CbxEdoCivil.Items.Add(reader.GetString("idTipoEdoCivil")); //Pasar idTipoEdoCivil a string en combobox
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
+           
     }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            //try
-            //{
-            //  connector.Open();
-            //MessageBox.Show("Conectado");
-            //}
-            //catch (Exception)
-            //{
+            try
+            {
+                string Query = "SELECT * FROM dbu3mala.estadocivil;";
+              //string QueryDrs = "SELECT * FROM dbu3mala.tbmedicos";
+                connector.Open(); //Abrir mi conexion
+                MySqlCommand myCommand = new MySqlCommand(Query,  connector); ;
+             //MySqlCommand myCommandDrs = new MySqlCommand(QueryDrs, connector) ; 
+                MySqlDataReader reader = myCommand.ExecuteReader(); //Data reader
+                //MySqlDataReader readerDrs = myCommandDrs.ExecuteReader();
+                while (reader.Read()) //Mientras tenga registros que leer
+                {
+                    CbxEdoCivil.Items.Add(reader.GetString("idTipoEdoCivil"));
+                  //cbxMedicos.Items.Add(readerDrs.GetString("NombreCompleto"));
+                }
+            }
+            catch (Exception )
+            {
+                MessageBox.Show("Algo anda MUY mal!");
+            }
 
-            //  MessageBox.Show("Error");
-            //}
+            try
+            {
+
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
         }
     }
 }
