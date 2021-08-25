@@ -6,7 +6,6 @@ namespace U2A1IDEXXXx
 {
     public partial class Form1 : Form
     {
-        MySqlConnection connector = new MySqlConnection("server=127.0.0.1; database=dbu3mala; Uid=root; pwd=;");  //String de conexion
        
 
         public Form1()
@@ -56,31 +55,44 @@ namespace U2A1IDEXXXx
 
         private void button3_Click(object sender, EventArgs e)
         {
-            try
-            {
-                connector.Open();
-                MessageBox.Show("Conectado");
-            }
-            catch (Exception)
-            {
+           // try
+            //{
+              //  connector.Open();
+                //MessageBox.Show("Conectado");
+            //}
+            //catch (Exception)
+            //{
 
-                MessageBox.Show("Error");
-            }
+              //  MessageBox.Show("Error");
+            //}
         }
 
         private void Form1_Load(object sender, EventArgs e) //Metodo form load
         {
 
-            MySqlCommand myCommand = new MySqlCommand("SELECT idTipoEdoCivil FROM estadocivil;", connector); //string de conexion
-            connector.Open(); //Abrir mi conexion
-            MySqlDataReader myRegister = myCommand.ExecuteReader(); //Data reader
-            while (myRegister.Read()) //Mientras tenga registros que leer
+            try
             {
-                CbxEdoCivil.Items.Add(myRegister["idTipoEdoCivil"].ToString()); //Pasar idTipoEdoCivil a string en combobox
+                MySqlConnection connector = new MySqlConnection("server=localhost; database=dbu3mala; Uid=root; pwd=; Port=3306");
+                // MySqlCommand myCommand = new MySqlCommand(, connector); //string de conexion
+                string Query = "SELECT idTipoEdoCivil FROM estadocivil;";
+                connector.Open(); //Abrir mi conexion
+
+                MySqlCommand myCommand = new MySqlCommand(Query, connector);
+                MySqlDataReader myRegister = myCommand.ExecuteReader(); //Data reader
+                while (myRegister.Read()) //Mientras tenga registros que leer
+                {
+                    CbxEdoCivil.Items.Add(myRegister.GetString("idTipoEdoCivil")); //Pasar idTipoEdoCivil a string en combobox
+                }
             }
-            connector.Close(); //Cierro mi conexion
+            catch (Exception)
+            {
+                MessageBox.Show("Algo anda mal");
+            }
     }
 
         
     }
 }
+
+
+
