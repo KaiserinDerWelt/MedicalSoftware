@@ -1,19 +1,12 @@
 ﻿using System;
 using MySql.Data.MySqlClient;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace U2A1IDEXXXx
 {
     public partial class Form1 : Form
     {
-        private MySqlConnection conexion;
+       
 
         public Form1()
         {
@@ -62,36 +55,44 @@ namespace U2A1IDEXXXx
 
         private void button3_Click(object sender, EventArgs e)
         {
-            MyConnection.GetConnection();
-            MessageBox.Show("Conectado");
+           // try
+            //{
+              //  connector.Open();
+                //MessageBox.Show("Conectado");
+            //}
+            //catch (Exception)
+            //{
+
+              //  MessageBox.Show("Error");
+            //}
         }
 
         private void Form1_Load(object sender, EventArgs e) //Metodo form load
         {
-            MyConnection.GetConnection();
-            MySqlCommand myCommand = new MySqlCommand("SELECT idTipoEdoCivil FROM estadocivil;", conexion); //Comando Sql para llamar el estado civil
-           // MySqlCommand myCommandMedicos = new MySqlCommand("SELECT NombreCompleto FROM tbmedicos;", conexion);
-            conexion.Open(); //Apertura de conexion
-              MySqlDataReader register = myCommand.ExecuteReader();
-             // MySqlDataReader registerMedicos = myCommandMedicos.ExecuteReader();
-            //Ahora un ciclo while
-            while (register.Read())
-             {
-        CbxEdoCivil.Items.Add(register["idTipoEdoCivil"].ToString());
+
+            try
+            {
+                MySqlConnection connector = new MySqlConnection("server=localhost; database=dbu3mala; Uid=root; pwd=; Port=3306");
+                // MySqlCommand myCommand = new MySqlCommand(, connector); //string de conexion
+                string Query = "SELECT idTipoEdoCivil FROM estadocivil;";
+                connector.Open(); //Abrir mi conexion
+
+                MySqlCommand myCommand = new MySqlCommand(Query, connector);
+                MySqlDataReader myRegister = myCommand.ExecuteReader(); //Data reader
+                while (myRegister.Read()) //Mientras tenga registros que leer
+                {
+                    CbxEdoCivil.Items.Add(myRegister.GetString("idTipoEdoCivil")); //Pasar idTipoEdoCivil a string en combobox
+                }
             }
-        conexion.Close(); //Cerrado de conexion
-
-           // while (registerMedicos.Read())
-           // {
-             //   cbxMedicos.Items.Add(registerMedicos["NombreCompleto"].ToString());
-            //}
-            //conexion.Close(); //Cerrado de conexion
-        }
-
+            catch (Exception)
+            {
+                MessageBox.Show("Algo anda mal");
+            }
     }
 
+        
+    }
+}
 
 
 
-
-}       
