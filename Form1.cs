@@ -94,7 +94,7 @@ namespace U2A1IDEXXXx
             catch (Exception)
             {
 
-                MessageBox.Show("Algo salio pesimo");
+                MessageBox.Show("Algo salio pesimo:");
             }
         }
     }
