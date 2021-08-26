@@ -1,13 +1,13 @@
 ﻿using System;
 using MySql.Data.MySqlClient;
 using System.Windows.Forms;
-
+using System.Data;
 
 namespace U2A1IDEXXXx
 {
     public partial class Form1 : Form
     {
-       
+
 
         public Form1()
         {
@@ -36,10 +36,10 @@ namespace U2A1IDEXXXx
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
+            
+    }
 
-        }
-
-        private void radioButtonMas_CheckedChanged(object sender, EventArgs e)
+    private void radioButtonMas_CheckedChanged(object sender, EventArgs e)
         {
 
         }
@@ -58,40 +58,48 @@ namespace U2A1IDEXXXx
 
       private void Form1_Load(object sender, EventArgs e) //Metodo form load
         {
+           
+            
+              
+                
+                
+               
 
+        }
+
+        private void ProbarConexion_Click(object sender, EventArgs e)
+        {
             try
             {
                 MySqlConnection connector = new MySqlConnection("server=127.0.0.1; database=dbu3mala; Uid=root; pwd=; port=3306;");
-                string Query = "SELECT * FROM dbu3mala.estadocivil;";
                 connector.Open(); //Abrir mi conexion
-                MySqlCommand myCommand = new MySqlCommand(Query, connector);
-                MySqlDataReader reader = myCommand.ExecuteReader(); //Data reader
-                while (reader.Read()) //Mientras tenga registros que leer
+                MySqlDataAdapter da = new MySqlDataAdapter("SELECT * FROM tbmedicos;", connector);
+                MySqlDataAdapter da1 = new MySqlDataAdapter("SELECT * FROM estadocivil;", connector);
+
+                DataTable dt = new DataTable();
+                DataTable dt1 = new DataTable();
+                da.Fill(dt);
+                da1.Fill(dt1);
+
+                for (int i = 0; i < dt.Rows.Count; i++)
                 {
-                    CbxEdoCivil.Items.Add(reader.GetString("idTipoEdoCivil")); //Pasar idTipoEdoCivil a string en combobox
+                    cbxMedicos.Items.Add(dt.Rows[i]["NombreCompleto"]);
+                }
+
+                for (int i = 0; i < dt1.Rows.Count; i++)
+                {
+                    CbxEdoCivil.Items.Add(dt1.Rows[i]["idTipoEdoCivil"]);
                 }
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                MessageBox.Show(ex.Message);
+
+                MessageBox.Show("Algo salio pesimo:");
             }
-    }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-            //try
-            //{
-            //  connector.Open();
-            //MessageBox.Show("Conectado");
-            //}
-            //catch (Exception)
-            //{
-
-            //  MessageBox.Show("Error");
-            //}
         }
     }
 }
+
 
 
 
