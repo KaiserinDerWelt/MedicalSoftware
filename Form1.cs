@@ -1,13 +1,12 @@
 ﻿using System;
 using MySql.Data.MySqlClient;
 using System.Windows.Forms;
-
+using System.Data;
 
 namespace U2A1IDEXXXx
 {
     public partial class Form1 : Form
     {
-        MySqlConnection connector = new MySqlConnection("server=127.0.0.1; database=dbu3mala; Uid=root; pwd=; port=3306;");
 
 
         public Form1()
@@ -60,39 +59,37 @@ namespace U2A1IDEXXXx
       private void Form1_Load(object sender, EventArgs e) //Metodo form load
         {
            
+            
+              
+                
+                
+               
 
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void ProbarConexion_Click(object sender, EventArgs e)
         {
             try
             {
-                string Query = "SELECT * FROM dbu3mala.estadocivil;"; ;
-                // string QueryDrs = "SELECT * FROM dbu3mala.tbmedicos;";
+                MySqlConnection connector = new MySqlConnection("server=127.0.0.1; database=dbu3mala; Uid=root; pwd=; port=3306;");
                 connector.Open(); //Abrir mi conexion
-                MySqlCommand myCommand = new MySqlCommand(Query, connector);
-                // MySqlCommand myCommandDrs = new MySqlCommand(QueryDrs, connector); 
-                MySqlDataReader reader = myCommand.ExecuteReader(); //Data reader
-                                                                    // MySqlDataReader readerDrs = myCommandDrs.ExecuteReader();
-                while (reader.Read()) //Mientras tenga registros que leer
+                MySqlDataAdapter da = new MySqlDataAdapter("SELECT * FROM tbmedicos;", connector);
+
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+
+                for (int i = 0; i < dt.Rows.Count; i++)
                 {
-                    CbxEdoCivil.Items.Add(reader.GetString("idTipoEdoCivil"));
-                    //cbxMedicos.Items.Add(readerDrs.GetString("NombreCompleto"));
+                    cbxMedicos.Items.Add(dt.Rows[i]["NombreCompleto"]);
                 }
+
             }
             catch (Exception)
             {
-                MessageBox.Show("Algo anda MUY mal!");
-            }
-            finally
-            {
-                connector.Close();
-            }
 
-
+                MessageBox.Show("Algo salio pesimo");
+            }
         }
-
-       
     }
 }
 

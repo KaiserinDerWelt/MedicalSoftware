@@ -274,7 +274,7 @@ namespace U2A1IDEXXXx
             this.ProbarConexion.TabIndex = 20;
             this.ProbarConexion.Text = "Conectar al Sistema";
             this.ProbarConexion.UseVisualStyleBackColor = false;
-            this.ProbarConexion.Click += new System.EventHandler(this.button3_Click);
+            this.ProbarConexion.Click += new System.EventHandler(this.ProbarConexion_Click);
             // 
             // LabelListadoMedicos
             // 
