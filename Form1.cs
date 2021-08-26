@@ -74,15 +74,22 @@ namespace U2A1IDEXXXx
                 MySqlConnection connector = new MySqlConnection("server=127.0.0.1; database=dbu3mala; Uid=root; pwd=; port=3306;");
                 connector.Open(); //Abrir mi conexion
                 MySqlDataAdapter da = new MySqlDataAdapter("SELECT * FROM tbmedicos;", connector);
+                MySqlDataAdapter da1 = new MySqlDataAdapter("SELECT * FROM estadocivil;", connector);
 
                 DataTable dt = new DataTable();
+                DataTable dt1 = new DataTable();
                 da.Fill(dt);
+                da1.Fill(dt1);
 
                 for (int i = 0; i < dt.Rows.Count; i++)
                 {
                     cbxMedicos.Items.Add(dt.Rows[i]["NombreCompleto"]);
                 }
 
+                for (int i = 0; i < dt1.Rows.Count; i++)
+                {
+                    CbxEdoCivil.Items.Add(dt1.Rows[i]["idTipoEdoCivil"]);
+                }
             }
             catch (Exception)
             {
