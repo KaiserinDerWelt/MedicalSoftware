@@ -54,7 +54,6 @@ namespace U2A1IDEXXXx
             this.radioButtonFem = new System.Windows.Forms.RadioButton();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.ProbarConexion = new System.Windows.Forms.Button();
             this.LabelListadoMedicos = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.cbxMedicos = new System.Windows.Forms.ComboBox();
@@ -268,17 +267,6 @@ namespace U2A1IDEXXXx
             this.button2.TabIndex = 19;
             this.button2.UseVisualStyleBackColor = true;
             // 
-            // ProbarConexion
-            // 
-            this.ProbarConexion.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ProbarConexion.Location = new System.Drawing.Point(550, 209);
-            this.ProbarConexion.Name = "ProbarConexion";
-            this.ProbarConexion.Size = new System.Drawing.Size(206, 58);
-            this.ProbarConexion.TabIndex = 20;
-            this.ProbarConexion.Text = "Conectar al Sistema";
-            this.ProbarConexion.UseVisualStyleBackColor = false;
-            this.ProbarConexion.Click += new System.EventHandler(this.ProbarConexion_Click);
-            // 
             // LabelListadoMedicos
             // 
             this.LabelListadoMedicos.AutoSize = true;
@@ -330,6 +318,7 @@ namespace U2A1IDEXXXx
             // 
             // Form1
             // 
+            this.AccessibleName = "Form1";
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(778, 423);
@@ -337,7 +326,6 @@ namespace U2A1IDEXXXx
             this.Controls.Add(this.cbxMedicos);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.LabelListadoMedicos);
-            this.Controls.Add(this.ProbarConexion);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.RbdSexo);
@@ -359,7 +347,8 @@ namespace U2A1IDEXXXx
             this.Controls.Add(this.NombreClinica);
             this.Controls.Add(this.Guardar);
             this.Name = "Form1";
-            this.Text = "Clinica Alemana";
+            this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load_1);
             ((System.ComponentModel.ISupportInitialize)(this.LogoClinica)).EndInit();
             this.RbdSexo.ResumeLayout(false);
             this.RbdSexo.PerformLayout();
@@ -396,7 +385,6 @@ namespace U2A1IDEXXXx
         private System.Windows.Forms.RadioButton radioButtonMas;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button ProbarConexion;
         private System.Windows.Forms.Label LabelListadoMedicos;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.ComboBox cbxMedicos;
