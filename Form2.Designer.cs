@@ -33,8 +33,9 @@ namespace U2A1IDEXXXx
             this.cbxMedicos = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.pacientesRelacionados = new System.Windows.Forms.Label();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // LabelListadoMedicos
@@ -79,14 +80,6 @@ namespace U2A1IDEXXXx
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(126, 171);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(424, 253);
-            this.textBox1.TabIndex = 28;
-            // 
             // pacientesRelacionados
             // 
             this.pacientesRelacionados.AutoSize = true;
@@ -96,20 +89,33 @@ namespace U2A1IDEXXXx
             this.pacientesRelacionados.TabIndex = 29;
             this.pacientesRelacionados.Text = "Pacientes :";
             // 
+            // dataGridView1
+            // 
+            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ControlLight;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.GridColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.dataGridView1.Location = new System.Drawing.Point(126, 174);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowTemplate.Height = 25;
+            this.dataGridView1.Size = new System.Drawing.Size(424, 249);
+            this.dataGridView1.TabIndex = 30;
+            // 
             // Form2
             // 
             this.AccessibleName = "FormBuscarXXX";
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.pacientesRelacionados);
-            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.cbxMedicos);
             this.Controls.Add(this.LabelListadoMedicos);
             this.Name = "Form2";
             this.Text = "Form2";
+            this.Load += new System.EventHandler(this.Form2_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -121,7 +127,7 @@ namespace U2A1IDEXXXx
         private System.Windows.Forms.ComboBox cbxMedicos;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label pacientesRelacionados;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }

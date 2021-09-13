@@ -25,6 +25,16 @@ namespace U2A1IDEXXXx
 
         private void button1_Click(object sender, EventArgs e)
         {
+            
+        }
+
+        private void contextMenuStrip1_Opening(object sender, CancelEventArgs e)
+        {
+
+        }
+
+        private void Form2_Load(object sender, EventArgs e)
+        {
             MySqlConnection connector = new MySqlConnection("server=127.0.0.1; database=DBU3MALA; Uid=root; pwd=; port=3306;");
             connector.Open();
             try
@@ -43,11 +53,6 @@ namespace U2A1IDEXXXx
 
                 MessageBox.Show("Algo salio pesimo:");
             }
-        }
-
-        private void contextMenuStrip1_Opening(object sender, CancelEventArgs e)
-        {
-
         }
     }
 }
