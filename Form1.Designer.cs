@@ -54,21 +54,23 @@ namespace U2A1IDEXXXx
             this.radioButtonFem = new System.Windows.Forms.RadioButton();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.ProbarConexion = new System.Windows.Forms.Button();
             this.LabelListadoMedicos = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.cbxMedicos = new System.Windows.Forms.ComboBox();
+            this.button3 = new System.Windows.Forms.Button();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
             ((System.ComponentModel.ISupportInitialize)(this.LogoClinica)).BeginInit();
             this.RbdSexo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // Guardar
             // 
             this.Guardar.Image = global::U2A1IDEXXXx.Properties.Resources.Save;
-            this.Guardar.Location = new System.Drawing.Point(653, 365);
+            this.Guardar.Location = new System.Drawing.Point(689, 284);
             this.Guardar.Name = "Guardar";
-            this.Guardar.Size = new System.Drawing.Size(113, 37);
+            this.Guardar.Size = new System.Drawing.Size(65, 37);
             this.Guardar.TabIndex = 0;
             this.Guardar.UseVisualStyleBackColor = true;
             this.Guardar.Click += new System.EventHandler(this.button1_Click);
@@ -249,9 +251,9 @@ namespace U2A1IDEXXXx
             // button1
             // 
             this.button1.Image = global::U2A1IDEXXXx.Properties.Resources.Refresh;
-            this.button1.Location = new System.Drawing.Point(505, 365);
+            this.button1.Location = new System.Drawing.Point(630, 284);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(113, 37);
+            this.button1.Size = new System.Drawing.Size(53, 37);
             this.button1.TabIndex = 18;
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click_1);
@@ -259,22 +261,11 @@ namespace U2A1IDEXXXx
             // button2
             // 
             this.button2.Image = global::U2A1IDEXXXx.Properties.Resources.Trash;
-            this.button2.Location = new System.Drawing.Point(355, 365);
+            this.button2.Location = new System.Drawing.Point(550, 284);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(113, 37);
+            this.button2.Size = new System.Drawing.Size(68, 37);
             this.button2.TabIndex = 19;
             this.button2.UseVisualStyleBackColor = true;
-            // 
-            // ProbarConexion
-            // 
-            this.ProbarConexion.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ProbarConexion.Location = new System.Drawing.Point(13, 344);
-            this.ProbarConexion.Name = "ProbarConexion";
-            this.ProbarConexion.Size = new System.Drawing.Size(154, 58);
-            this.ProbarConexion.TabIndex = 20;
-            this.ProbarConexion.Text = "Conectar al Sistema";
-            this.ProbarConexion.UseVisualStyleBackColor = false;
-            this.ProbarConexion.Click += new System.EventHandler(this.ProbarConexion_Click);
             // 
             // LabelListadoMedicos
             // 
@@ -288,9 +279,9 @@ namespace U2A1IDEXXXx
             // pictureBox1
             // 
             this.pictureBox1.Image = global::U2A1IDEXXXx.Properties.Resources.salud;
-            this.pictureBox1.Location = new System.Drawing.Point(566, 205);
+            this.pictureBox1.Location = new System.Drawing.Point(13, 272);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(165, 153);
+            this.pictureBox1.Size = new System.Drawing.Size(172, 152);
             this.pictureBox1.TabIndex = 23;
             this.pictureBox1.TabStop = false;
             // 
@@ -302,15 +293,39 @@ namespace U2A1IDEXXXx
             this.cbxMedicos.Size = new System.Drawing.Size(400, 23);
             this.cbxMedicos.TabIndex = 24;
             // 
+            // button3
+            // 
+            this.button3.AccessibleName = "btnPacienteMedico";
+            this.button3.BackColor = System.Drawing.SystemColors.Highlight;
+            this.button3.Location = new System.Drawing.Point(0, 22);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(204, 23);
+            this.button3.TabIndex = 25;
+            this.button3.Text = "Buscar relacion Paciente -Medico";
+            this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.AccessibleName = "groupNavegar";
+            this.groupBox1.Controls.Add(this.button3);
+            this.groupBox1.Location = new System.Drawing.Point(550, 327);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(204, 84);
+            this.groupBox1.TabIndex = 26;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Acciones Disponibles";
+            // 
             // Form1
             // 
+            this.AccessibleName = "Form1";
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(778, 423);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.cbxMedicos);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.LabelListadoMedicos);
-            this.Controls.Add(this.ProbarConexion);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.RbdSexo);
@@ -332,11 +347,13 @@ namespace U2A1IDEXXXx
             this.Controls.Add(this.NombreClinica);
             this.Controls.Add(this.Guardar);
             this.Name = "Form1";
-            this.Text = "Clinica Alemana";
+            this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load_1);
             ((System.ComponentModel.ISupportInitialize)(this.LogoClinica)).EndInit();
             this.RbdSexo.ResumeLayout(false);
             this.RbdSexo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.groupBox1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -368,10 +385,11 @@ namespace U2A1IDEXXXx
         private System.Windows.Forms.RadioButton radioButtonMas;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button ProbarConexion;
         private System.Windows.Forms.Label LabelListadoMedicos;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.ComboBox cbxMedicos;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.GroupBox groupBox1;
     }
 }
 

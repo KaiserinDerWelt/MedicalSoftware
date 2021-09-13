@@ -58,16 +58,22 @@ namespace U2A1IDEXXXx
 
       private void Form1_Load(object sender, EventArgs e) //Metodo form load
         {
-           
-            
-              
-                
-                
-               
+         
 
         }
 
         private void ProbarConexion_Click(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Form2 FormaMedicoPaciente = new Form2();
+            FormaMedicoPaciente.Show();
+        }
+
+        private void Form1_Load_1(object sender, EventArgs e)
         {
             try
             {
@@ -96,6 +102,7 @@ namespace U2A1IDEXXXx
 
                 MessageBox.Show("Algo salio pesimo:");
             }
+
         }
     }
 }
