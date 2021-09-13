@@ -33,7 +33,8 @@ namespace U2A1IDEXXXx
             this.cbxMedicos = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.pacientesRelacionados = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // LabelListadoMedicos
@@ -52,7 +53,7 @@ namespace U2A1IDEXXXx
             this.cbxMedicos.FormattingEnabled = true;
             this.cbxMedicos.Location = new System.Drawing.Point(126, 96);
             this.cbxMedicos.Name = "cbxMedicos";
-            this.cbxMedicos.Size = new System.Drawing.Size(400, 23);
+            this.cbxMedicos.Size = new System.Drawing.Size(424, 23);
             this.cbxMedicos.TabIndex = 25;
             this.cbxMedicos.SelectedIndexChanged += new System.EventHandler(this.cbxMedicos_SelectedIndexChanged);
             // 
@@ -70,7 +71,7 @@ namespace U2A1IDEXXXx
             // 
             this.button1.AccessibleName = "BtnBuscar";
             this.button1.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.button1.Location = new System.Drawing.Point(617, 76);
+            this.button1.Location = new System.Drawing.Point(612, 85);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(152, 43);
             this.button1.TabIndex = 27;
@@ -78,25 +79,22 @@ namespace U2A1IDEXXXx
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // tableLayoutPanel1
+            // textBox1
             // 
-            this.tableLayoutPanel1.AccessibleName = "tablaVaciadoMedicos";
-            this.tableLayoutPanel1.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.tableLayoutPanel1.ColumnCount = 4;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 21.05263F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 78.94736F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 169F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 154F));
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(32, 135);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 5;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 49.33333F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.66667F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 34F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 34F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 27F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(494, 171);
-            this.tableLayoutPanel1.TabIndex = 28;
+            this.textBox1.Location = new System.Drawing.Point(126, 171);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(424, 253);
+            this.textBox1.TabIndex = 28;
+            // 
+            // pacientesRelacionados
+            // 
+            this.pacientesRelacionados.AutoSize = true;
+            this.pacientesRelacionados.Location = new System.Drawing.Point(32, 174);
+            this.pacientesRelacionados.Name = "pacientesRelacionados";
+            this.pacientesRelacionados.Size = new System.Drawing.Size(63, 15);
+            this.pacientesRelacionados.TabIndex = 29;
+            this.pacientesRelacionados.Text = "Pacientes :";
             // 
             // Form2
             // 
@@ -104,7 +102,8 @@ namespace U2A1IDEXXXx
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.tableLayoutPanel1);
+            this.Controls.Add(this.pacientesRelacionados);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.cbxMedicos);
@@ -122,6 +121,7 @@ namespace U2A1IDEXXXx
         private System.Windows.Forms.ComboBox cbxMedicos;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label pacientesRelacionados;
     }
 }

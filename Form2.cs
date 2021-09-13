@@ -44,5 +44,10 @@ namespace U2A1IDEXXXx
                 MessageBox.Show("Algo salio pesimo:");
             }
         }
+
+        private void contextMenuStrip1_Opening(object sender, CancelEventArgs e)
+        {
+
+        }
     }
 }
