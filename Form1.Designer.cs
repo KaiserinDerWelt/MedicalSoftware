@@ -315,6 +315,7 @@ namespace U2A1IDEXXXx
             this.button3.TabIndex = 25;
             this.button3.Text = "Buscar relacion Paciente -Medico";
             this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // groupBox1
             // 

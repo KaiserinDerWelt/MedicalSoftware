@@ -17,9 +17,6 @@ namespace U2A1IDEXXXx
             InitializeComponent();
         }
 
-        private void LabelListadoMedicos_Click(object sender, EventArgs e)
-        {
-
-        }
+       
     }
 }

@@ -45,7 +45,6 @@ namespace U2A1IDEXXXx
             this.LabelListadoMedicos.Size = new System.Drawing.Size(58, 15);
             this.LabelListadoMedicos.TabIndex = 22;
             this.LabelListadoMedicos.Text = "Medicos :";
-            this.LabelListadoMedicos.Click += new System.EventHandler(this.LabelListadoMedicos_Click);
             // 
             // cbxMedicos
             // 

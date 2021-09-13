@@ -98,6 +98,11 @@ namespace U2A1IDEXXXx
             }
         }
 
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Form2 FormaMedicoPaciente = new Form2();
+            FormaMedicoPaciente.Show();
+        }
     }
 }
 
