@@ -20,11 +20,15 @@ namespace U2A1IDEXXXx
 
         private void cbxMedicos_SelectedIndexChanged(object sender, EventArgs e)
         {
+            
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            MySqlConnection connector = new MySqlConnection("server=127.0.0.1; database=DBU3MALA; Uid=root; pwd=; port=3306;");
+            connector.Open();
             try
             {
-                MySqlConnection connector = new MySqlConnection("server=127.0.0.1; database=DBU3MALA; Uid=root; pwd=; port=3306;");
-                connector.Open();
-
                 MySqlDataAdapter da = new MySqlDataAdapter("SELECT * FROM tbmedicos;", connector);
                 DataTable dt = new DataTable();
                 da.Fill(dt);

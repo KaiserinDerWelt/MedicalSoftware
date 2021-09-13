@@ -103,6 +103,8 @@ namespace U2A1IDEXXXx
             Form2 FormaMedicoPaciente = new Form2();
             FormaMedicoPaciente.Show();
         }
+
+        
     }
 }
 
