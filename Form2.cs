@@ -18,41 +18,30 @@ namespace U2A1IDEXXXx
             InitializeComponent();
         }
 
-        private void cbxMedicos_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            
-        }
+       
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            
-        }
+        
 
-        private void contextMenuStrip1_Opening(object sender, CancelEventArgs e)
-        {
-
-        }
+     
 
         private void Form2_Load(object sender, EventArgs e)
         {
-            MySqlConnection connector = new MySqlConnection("server=127.0.0.1; database=DBU3MALA; Uid=root; pwd=; port=3306;");
-            connector.Open();
-            try
-            {
-                MySqlDataAdapter da = new MySqlDataAdapter("SELECT * FROM tbmedicos;", connector);
-                DataTable dt = new DataTable();
-                da.Fill(dt);
+           
+        }
+        // Combobox medicos formulario dos
+        private void comboBoxMedicos_SelectedIndexChanged(object sender, EventArgs e)
+        {
 
-                for (int i = 0; i < dt.Rows.Count; i++)
-                {
-                    cbxMedicos.Items.Add(dt.Rows[i]["NombreCompleto"]);
-                }
-            }
-            catch (Exception)
-            {
+        }
+        //Boton buscar
+        private void btnBuscarSelect_Click(object sender, EventArgs e)
+        {
 
-                MessageBox.Show("Algo salio pesimo:");
-            }
+        }
+        //Tabla de vaciado
+        private void Listar_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

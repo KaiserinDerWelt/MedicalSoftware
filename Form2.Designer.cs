@@ -30,12 +30,12 @@ namespace U2A1IDEXXXx
         private void InitializeComponent()
         {
             this.LabelListadoMedicos = new System.Windows.Forms.Label();
-            this.cbxMedicos = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnBuscarSelect = new System.Windows.Forms.Button();
             this.pacientesRelacionados = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.Listar = new System.Windows.Forms.DataGridView();
+            this.comboBoxMedicos = new System.Windows.Forms.ComboBox();
+            ((System.ComponentModel.ISupportInitialize)(this.Listar)).BeginInit();
             this.SuspendLayout();
             // 
             // LabelListadoMedicos
@@ -48,16 +48,6 @@ namespace U2A1IDEXXXx
             this.LabelListadoMedicos.TabIndex = 22;
             this.LabelListadoMedicos.Text = "Medicos :";
             // 
-            // cbxMedicos
-            // 
-            this.cbxMedicos.AccessibleName = "DropMedicosFII";
-            this.cbxMedicos.FormattingEnabled = true;
-            this.cbxMedicos.Location = new System.Drawing.Point(126, 96);
-            this.cbxMedicos.Name = "cbxMedicos";
-            this.cbxMedicos.Size = new System.Drawing.Size(424, 23);
-            this.cbxMedicos.TabIndex = 25;
-            this.cbxMedicos.SelectedIndexChanged += new System.EventHandler(this.cbxMedicos_SelectedIndexChanged);
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -68,17 +58,17 @@ namespace U2A1IDEXXXx
             this.label1.TabIndex = 26;
             this.label1.Text = "Modulo de Busqueda ";
             // 
-            // button1
+            // btnBuscarSelect
             // 
-            this.button1.AccessibleName = "BtnBuscar";
-            this.button1.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.button1.Location = new System.Drawing.Point(612, 85);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(152, 43);
-            this.button1.TabIndex = 27;
-            this.button1.Text = "Buscar";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnBuscarSelect.AccessibleName = " btnBuscarSelect";
+            this.btnBuscarSelect.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnBuscarSelect.Location = new System.Drawing.Point(612, 85);
+            this.btnBuscarSelect.Name = "btnBuscarSelect";
+            this.btnBuscarSelect.Size = new System.Drawing.Size(152, 43);
+            this.btnBuscarSelect.TabIndex = 27;
+            this.btnBuscarSelect.Text = "Buscar";
+            this.btnBuscarSelect.UseVisualStyleBackColor = false;
+            this.btnBuscarSelect.Click += new System.EventHandler(this.btnBuscarSelect_Click);
             // 
             // pacientesRelacionados
             // 
@@ -89,16 +79,26 @@ namespace U2A1IDEXXXx
             this.pacientesRelacionados.TabIndex = 29;
             this.pacientesRelacionados.Text = "Pacientes :";
             // 
-            // dataGridView1
+            // Listar
             // 
-            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ControlLight;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.GridColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.dataGridView1.Location = new System.Drawing.Point(126, 174);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowTemplate.Height = 25;
-            this.dataGridView1.Size = new System.Drawing.Size(424, 249);
-            this.dataGridView1.TabIndex = 30;
+            this.Listar.AccessibleName = "Listar";
+            this.Listar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.Listar.Location = new System.Drawing.Point(126, 158);
+            this.Listar.Name = "Listar";
+            this.Listar.RowTemplate.Height = 25;
+            this.Listar.Size = new System.Drawing.Size(424, 214);
+            this.Listar.TabIndex = 30;
+            this.Listar.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Listar_CellContentClick);
+            // 
+            // comboBoxMedicos
+            // 
+            this.comboBoxMedicos.AccessibleName = "comboBoxMedicos";
+            this.comboBoxMedicos.FormattingEnabled = true;
+            this.comboBoxMedicos.Location = new System.Drawing.Point(126, 85);
+            this.comboBoxMedicos.Name = "comboBoxMedicos";
+            this.comboBoxMedicos.Size = new System.Drawing.Size(424, 23);
+            this.comboBoxMedicos.TabIndex = 31;
+            this.comboBoxMedicos.SelectedIndexChanged += new System.EventHandler(this.comboBoxMedicos_SelectedIndexChanged);
             // 
             // Form2
             // 
@@ -106,16 +106,16 @@ namespace U2A1IDEXXXx
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.comboBoxMedicos);
+            this.Controls.Add(this.Listar);
             this.Controls.Add(this.pacientesRelacionados);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnBuscarSelect);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.cbxMedicos);
             this.Controls.Add(this.LabelListadoMedicos);
             this.Name = "Form2";
             this.Text = "Form2";
             this.Load += new System.EventHandler(this.Form2_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Listar)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -124,10 +124,10 @@ namespace U2A1IDEXXXx
         #endregion
 
         private System.Windows.Forms.Label LabelListadoMedicos;
-        private System.Windows.Forms.ComboBox cbxMedicos;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnBuscarSelect;
         private System.Windows.Forms.Label pacientesRelacionados;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView Listar;
+        private System.Windows.Forms.ComboBox comboBoxMedicos;
     }
 }
