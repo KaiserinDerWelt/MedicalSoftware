@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -17,6 +18,27 @@ namespace U2A1IDEXXXx
             InitializeComponent();
         }
 
-       
+        private void cbxMedicos_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                MySqlConnection connector = new MySqlConnection("server=127.0.0.1; database=DBU3MALA; Uid=root; pwd=; port=3306;");
+                connector.Open();
+
+                MySqlDataAdapter da = new MySqlDataAdapter("SELECT * FROM tbmedicos;", connector);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+
+                for (int i = 0; i < dt.Rows.Count; i++)
+                {
+                    cbxMedicos.Items.Add(dt.Rows[i]["NombreCompleto"]);
+                }
+            }
+            catch (Exception)
+            {
+
+                MessageBox.Show("Algo salio pesimo:");
+            }
+        }
     }
 }
