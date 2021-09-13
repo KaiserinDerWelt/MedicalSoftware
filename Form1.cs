@@ -71,7 +71,7 @@ namespace U2A1IDEXXXx
         {
             try
             {
-                MySqlConnection connector = new MySqlConnection("server=127.0.0.1; database=dbu3mala; Uid=root; pwd=; port=3306;");
+                MySqlConnection connector = new MySqlConnection("server=127.0.0.1; database=DBU3MALA; Uid=root; pwd=; port=3306;");
                 connector.Open(); //Abrir mi conexion
                 MySqlDataAdapter da = new MySqlDataAdapter("SELECT * FROM tbmedicos;", connector);
                 MySqlDataAdapter da1 = new MySqlDataAdapter("SELECT * FROM estadocivil;", connector);
