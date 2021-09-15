@@ -98,7 +98,6 @@ namespace U2A1IDEXXXx
             this.comboBoxMedicos.Name = "comboBoxMedicos";
             this.comboBoxMedicos.Size = new System.Drawing.Size(424, 23);
             this.comboBoxMedicos.TabIndex = 31;
-            this.comboBoxMedicos.SelectedIndexChanged += new System.EventHandler(this.comboBoxMedicos_SelectedIndexChanged);
             // 
             // Form2
             // 

@@ -10,7 +10,7 @@ namespace U2A1IDEXXXx
         {
               MySqlConnection connector = new MySqlConnection("server=127.0.0.1; database=dbu3mala; Uid=root; pwd=;");  //String de conexion
               connector.Open();
-               return connector;
+              return connector;
        }
 
     }
