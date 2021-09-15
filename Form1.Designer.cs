@@ -42,8 +42,6 @@ namespace U2A1IDEXXXx
             this.MovilLabel = new System.Windows.Forms.Label();
             this.EdadLabel = new System.Windows.Forms.Label();
             this.SexoLabel = new System.Windows.Forms.Label();
-            this.EdoCivilLabel = new System.Windows.Forms.Label();
-            this.CbxEdoCivil = new System.Windows.Forms.ComboBox();
             this.TxtNombreC = new System.Windows.Forms.TextBox();
             this.DireccionBox = new System.Windows.Forms.TextBox();
             this.TelefonoBox = new System.Windows.Forms.TextBox();
@@ -52,13 +50,15 @@ namespace U2A1IDEXXXx
             this.RbdSexo = new System.Windows.Forms.GroupBox();
             this.radioButtonMas = new System.Windows.Forms.RadioButton();
             this.radioButtonFem = new System.Windows.Forms.RadioButton();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
             this.LabelListadoMedicos = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.cbxMedicos = new System.Windows.Forms.ComboBox();
             this.button3 = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.Email = new System.Windows.Forms.Label();
+            this.textBoxMail = new System.Windows.Forms.TextBox();
+            this.CbxEdoCivil = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.LogoClinica)).BeginInit();
             this.RbdSexo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -68,12 +68,12 @@ namespace U2A1IDEXXXx
             // Guardar
             // 
             this.Guardar.Image = global::U2A1IDEXXXx.Properties.Resources.Save;
-            this.Guardar.Location = new System.Drawing.Point(689, 284);
+            this.Guardar.Location = new System.Drawing.Point(552, 229);
             this.Guardar.Name = "Guardar";
-            this.Guardar.Size = new System.Drawing.Size(65, 37);
+            this.Guardar.Size = new System.Drawing.Size(204, 37);
             this.Guardar.TabIndex = 0;
             this.Guardar.UseVisualStyleBackColor = true;
-            this.Guardar.Click += new System.EventHandler(this.button1_Click);
+            this.Guardar.Click += new System.EventHandler(this.Guardar_Click);
             // 
             // NombreClinica
             // 
@@ -160,25 +160,6 @@ namespace U2A1IDEXXXx
             this.SexoLabel.TabIndex = 9;
             this.SexoLabel.Text = "Sexo";
             // 
-            // EdoCivilLabel
-            // 
-            this.EdoCivilLabel.AutoSize = true;
-            this.EdoCivilLabel.Location = new System.Drawing.Point(550, 180);
-            this.EdoCivilLabel.Name = "EdoCivilLabel";
-            this.EdoCivilLabel.Size = new System.Drawing.Size(68, 15);
-            this.EdoCivilLabel.TabIndex = 10;
-            this.EdoCivilLabel.Text = "Estado Civil";
-            // 
-            // CbxEdoCivil
-            // 
-            this.CbxEdoCivil.FormattingEnabled = true;
-            this.CbxEdoCivil.Location = new System.Drawing.Point(635, 177);
-            this.CbxEdoCivil.Name = "CbxEdoCivil";
-            this.CbxEdoCivil.Size = new System.Drawing.Size(121, 23);
-            this.CbxEdoCivil.TabIndex = 11;
-            this.CbxEdoCivil.Text = "Seleccionar";
-            this.CbxEdoCivil.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
-            // 
             // TxtNombreC
             // 
             this.TxtNombreC.Location = new System.Drawing.Point(127, 107);
@@ -192,6 +173,7 @@ namespace U2A1IDEXXXx
             this.DireccionBox.Name = "DireccionBox";
             this.DireccionBox.Size = new System.Drawing.Size(400, 23);
             this.DireccionBox.TabIndex = 13;
+           
             // 
             // TelefonoBox
             // 
@@ -248,25 +230,6 @@ namespace U2A1IDEXXXx
             this.radioButtonFem.Text = "Femenino";
             this.radioButtonFem.UseVisualStyleBackColor = true;
             // 
-            // button1
-            // 
-            this.button1.Image = global::U2A1IDEXXXx.Properties.Resources.Refresh;
-            this.button1.Location = new System.Drawing.Point(630, 284);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(53, 37);
-            this.button1.TabIndex = 18;
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click_1);
-            // 
-            // button2
-            // 
-            this.button2.Image = global::U2A1IDEXXXx.Properties.Resources.Trash;
-            this.button2.Location = new System.Drawing.Point(550, 284);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(68, 37);
-            this.button2.TabIndex = 19;
-            this.button2.UseVisualStyleBackColor = true;
-            // 
             // LabelListadoMedicos
             // 
             this.LabelListadoMedicos.AutoSize = true;
@@ -288,7 +251,7 @@ namespace U2A1IDEXXXx
             // cbxMedicos
             // 
             this.cbxMedicos.FormattingEnabled = true;
-            this.cbxMedicos.Location = new System.Drawing.Point(127, 243);
+            this.cbxMedicos.Location = new System.Drawing.Point(127, 248);
             this.cbxMedicos.Name = "cbxMedicos";
             this.cbxMedicos.Size = new System.Drawing.Size(400, 23);
             this.cbxMedicos.TabIndex = 24;
@@ -309,12 +272,45 @@ namespace U2A1IDEXXXx
             // 
             this.groupBox1.AccessibleName = "groupNavegar";
             this.groupBox1.Controls.Add(this.button3);
-            this.groupBox1.Location = new System.Drawing.Point(550, 327);
+            this.groupBox1.Location = new System.Drawing.Point(552, 282);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(204, 84);
+            this.groupBox1.Size = new System.Drawing.Size(202, 129);
             this.groupBox1.TabIndex = 26;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Acciones Disponibles";
+            // 
+            // Email
+            // 
+            this.Email.AutoSize = true;
+            this.Email.Location = new System.Drawing.Point(13, 216);
+            this.Email.Name = "Email";
+            this.Email.Size = new System.Drawing.Size(36, 15);
+            this.Email.TabIndex = 27;
+            this.Email.Text = "Email";
+            // 
+            // textBoxMail
+            // 
+            this.textBoxMail.Location = new System.Drawing.Point(127, 216);
+            this.textBoxMail.Name = "textBoxMail";
+            this.textBoxMail.Size = new System.Drawing.Size(400, 23);
+            this.textBoxMail.TabIndex = 28;
+            // 
+            // CbxEdoCivil
+            // 
+            this.CbxEdoCivil.FormattingEnabled = true;
+            this.CbxEdoCivil.Location = new System.Drawing.Point(635, 180);
+            this.CbxEdoCivil.Name = "CbxEdoCivil";
+            this.CbxEdoCivil.Size = new System.Drawing.Size(121, 23);
+            this.CbxEdoCivil.TabIndex = 29;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(552, 187);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(68, 15);
+            this.label1.TabIndex = 30;
+            this.label1.Text = "Estado Civil";
             // 
             // Form1
             // 
@@ -322,20 +318,20 @@ namespace U2A1IDEXXXx
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(778, 423);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.CbxEdoCivil);
+            this.Controls.Add(this.textBoxMail);
+            this.Controls.Add(this.Email);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.cbxMedicos);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.LabelListadoMedicos);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.RbdSexo);
             this.Controls.Add(this.EdadBox);
             this.Controls.Add(this.MovilBox);
             this.Controls.Add(this.TelefonoBox);
             this.Controls.Add(this.DireccionBox);
             this.Controls.Add(this.TxtNombreC);
-            this.Controls.Add(this.CbxEdoCivil);
-            this.Controls.Add(this.EdoCivilLabel);
             this.Controls.Add(this.SexoLabel);
             this.Controls.Add(this.EdadLabel);
             this.Controls.Add(this.MovilLabel);
@@ -373,8 +369,6 @@ namespace U2A1IDEXXXx
         private System.Windows.Forms.Label MovilLabel;
         private System.Windows.Forms.Label EdadLabel;
         private System.Windows.Forms.Label SexoLabel;
-        private System.Windows.Forms.Label EdoCivilLabel;
-        private System.Windows.Forms.ComboBox CbxEdoCivil;
         private System.Windows.Forms.TextBox TxtNombreC;
         private System.Windows.Forms.TextBox DireccionBox;
         private System.Windows.Forms.TextBox TelefonoBox;
@@ -383,13 +377,15 @@ namespace U2A1IDEXXXx
         private System.Windows.Forms.GroupBox RbdSexo;
         private System.Windows.Forms.RadioButton radioButtonFem;
         private System.Windows.Forms.RadioButton radioButtonMas;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label LabelListadoMedicos;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.ComboBox cbxMedicos;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Label Email;
+        private System.Windows.Forms.TextBox textBoxMail;
+        private System.Windows.Forms.ComboBox CbxEdoCivil;
+        private System.Windows.Forms.Label label1;
     }
 }
 
