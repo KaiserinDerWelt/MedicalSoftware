@@ -124,33 +124,27 @@ namespace U2A1IDEXXXx
                 //a continuación te mostrare el código para la introducción de datos.
                 try
                 {
-                    string myConnectionString = "";
-
-                    // If the connection string is null, use a default.
-                    if (myConnectionString == "")
-                    {
-                        myConnectionString = "server=127.0.0.1; database=DBU3MALA; Uid=root; pwd=; port=3306;";
-                    }
+                    MySqlConnection connector = new MySqlConnection("server=127.0.0.1; database=DBU3MALA; Uid=root; pwd=; port=3306;");
                     try
                     {
-                        MySqlConnection myConnection = new MySqlConnection(myConnectionString);
-                        string myInsertQuery = "INSERT INTO paciente (NombreCompleto, Direccion, TelefonoFijo, Celular, Edad, Sexo, Email) Values(?NombreCompleto, ?Direccion, ?TelefonoFijo, ?Celular, ?Edad, ?Sexo, ?Email )";
+                       
+                       
+                        string myInsertQuery = "INSERT INTO tbpacientes (NombreCompleto, Direccion, TelefonoFijo, Celular, Edad, Email) Values(?NombreCompleto, ?Direccion, ?TelefonoFijo, ?Celular, ?Edad, ?Email )";
                         MySqlCommand myCommand = new MySqlCommand(myInsertQuery);
                         myCommand.Parameters.Add("?NombreCompleto", MySqlDbType.VarChar, 80).Value = TxtNombreC.Text;
                         myCommand.Parameters.Add("?Direccion", MySqlDbType.VarChar, 100).Value = DireccionBox.Text;
                         myCommand.Parameters.Add("?TelefonoFijo", MySqlDbType.VarChar, 10).Value = TelefonoBox.Text;
                         myCommand.Parameters.Add("?Celular", MySqlDbType.VarChar, 10).Value = MovilBox.Text;
                         myCommand.Parameters.Add("?Edad", MySqlDbType.Int32, 11).Value = EdadBox.Text;
-                        myCommand.Parameters.Add("?Sexo", MySqlDbType.VarChar, 1).Value = radioButtonFem.Text;
+                       // myCommand.Parameters.Add("?Sexo", MySqlDbType.VarChar, 1).Value = radioButtonFem.Text;
                         myCommand.Parameters.Add("?Email", MySqlDbType.VarChar, 50).Value = textBoxMail.Text;
-                        myConnection.Open();
+                        connector.Open();
                         myCommand.ExecuteNonQuery();
                         myCommand.Connection.Close();
 
-                        //en este caso los mensajes los invoco desde otros formularios que he creado yo mismo pero tambien puedes usar los messagebox como tu quieras
 
                         Form4 a = new Form4();
-                        a.label4.Text = "datos guardados exitosamente";
+                        a.label4.Text = "Algo salio mal";
                         a.ShowDialog();
                     }
                     catch (MySqlException)
@@ -163,20 +157,10 @@ namespace U2A1IDEXXXx
                 catch (System.Exception)
                 {
                     Form3 a = new Form3();
-                    a.primeraEtiqueta.Text = "Error de conexion";
+                    a.primeraEtiqueta.Text = "Registro Guardado";
                     a.ShowDialog();
                 }
-                //este pequ;o código es para que te borre los campos de los textbox automáticamente una vez que se guarden dentro de la base de datos.
 
-
-                foreach (Control c in this.Controls)
-                {
-
-
-                    //y este es para que te borre los maskedtextbox.
-                }
-         
-            //
         }
 
        
